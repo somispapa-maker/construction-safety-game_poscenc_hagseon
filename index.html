@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -344,7 +344,7 @@
                     { q: "개구부 덮개는 근로자, 장비 등 하중의 O배 이상을 견딜 수 있어야 한다. (숫자만 입력)", type: "input", answer: "2" },
                     { q: "개구부 덮개를 설치할 때 준수해야 할 사항으로 가장 중요한 것은?", type: "choice", options: ["뒤집히거나 떨어지지 않도록 고정", "눈에 잘 띄는 색으로 도색", "위험 경고표지 부착", "쉽게 열 수 있도록 손잡이 설치"], a: 0 },
                     { q: "엘리베이터 개구부용 난간대는 몇 단 이상 설치해야 하는가?", type: "choice", options: ["2단", "1단", "3단", "임의 설치"], a: 0 },
-                    { q: "난간 설치가 곤란한 단부 작업 시 필수 안전 조치는?", type: "choice", options: ["안전대 착용 및 부착설비", "작업 중지", "조심해서 작업", "빨리 작업 끝내기"], a: 0 }
+                    { q: "난간 설치가 곤란한 단부 작업 시 필수 안전 조치는?", type: "choice", options: ["안전대 착용 및 부착설비", "2인 1조로 작업", "작업지휘자 배치", "안전교육 실시후 작업"], a: 0 }
                 ]
             },
             { 
@@ -390,7 +390,7 @@
                 prompt: "construction site ceiling supported by many steel pipe props shoring photorealistic", seed: 606, color: "bg-amber-600", imgSrc: null,
                 questions: [
                     { q: "동바리 설치 시 반드시 준수해야 할 문서는?", type: "choice", options: ["구조검토 된 조립도", "시방서", "작업지침서", "안전관리계획서"], a: 0 },
-                    { q: "강관 동바리 높이가 O.Om 초과 시 높이 2m 이내마다 수평연결재를 설치해야 한다. (소수점 포함)", type: "input", answer: "3.5" },
+                    { q: "강관 동바리 높이가 O.Om 초과 시 높이 Om 이내마다 수평연결재를 설치해야 한다. (숫자 2개 순서대로 입력, 콤마로 구분)", type: "input", answer: ["3.5", "2"] },
                     { q: "동바리 하부 침하 방지를 위해 설치해야 하는 것은?", type: "choice", options: ["깔목 또는 깔판", "물 뿌리기", "모래 깔기", "그냥 설치"], a: 0 },
                     { q: "상하부 동바리는 동일 OO선상에 위치해야 한다.", type: "choice", options: ["수직", "수평", "교차 방향", "지그재그"], a: 0 },
                     { q: "콘크리트 타설 중 붕괴 징후 감시 대상은?", type: "choice", options: ["거푸집 및 동바리 변형", "콘크리트 타설 속도", "작업자 피로도", "장비 가동 상태"], a: 0 }
@@ -551,8 +551,6 @@
             
             chapters.forEach(chap => {
                 const img = new Image();
-                // 이미지 URL 생성 (Pollinations AI, 크기 800x600 최적화)
-                // URL 끝에 nologo=true 추가하여 워터마크 제거 시도
                 const url = `https://pollinations.ai/p/${encodeURIComponent(chap.prompt)}?width=800&height=600&seed=${chap.seed}&nologo=true`;
                 
                 img.onload = () => {
@@ -568,7 +566,6 @@
                     }
                 };
                 img.onerror = () => {
-                    // 실패 시 재시도 또는 기본 이미지 처리 (여기선 간단히 넘어감)
                     console.warn(`Failed to load image for chapter ${chap.id}`);
                     loadedImages++;
                     chap.finalImgSrc = url; // Keep url for retry
@@ -642,7 +639,7 @@
 
             // UI Reset
             document.getElementById('game-title').innerText = currentChapter.title;
-            // 분모에 현재 챕터의 전체 문제 수 표시하도록 수정
+            // Fix for 0/0 bug: Set denominator to total questions immediately
             document.getElementById('game-progress-bar').style.width = '0%';
             document.getElementById('game-progress-text').innerText = `0/${currentChapter.questions.length}`;
             
@@ -794,6 +791,7 @@
             } else {
                 const shuffledOptions = [...qData.options];
                 const correctText = qData.options[qData.a];
+                // Seeded shuffle if desired, or simple random
                 shuffledOptions.sort(() => Math.random() - 0.5);
 
                 shuffledOptions.forEach((opt) => {
@@ -846,7 +844,7 @@
                 
                 setTimeout(() => {
                     document.getElementById('question-card').classList.add('hidden');
-                    if (solvedCount === totalQ) {
+                    if (solvedCount === currentChapter.questions.length) {
                          saveProgress(currentChapter.id);
                          document.getElementById('scene-container').classList.add('hidden');
                          document.getElementById('chapter-complete').classList.remove('hidden');
