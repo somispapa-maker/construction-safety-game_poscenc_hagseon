@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -186,7 +186,6 @@
                 </div>
             </div>
 
-            <!-- Reset Button -->
             <button onclick="resetGame()" class="text-xs text-slate-400 hover:text-red-500 transition flex items-center gap-1 py-2">
                 <i class="fas fa-trash-alt"></i> 데이터 초기화 (처음부터 다시 시작)
             </button>
@@ -345,7 +344,7 @@
                     { q: "개구부 덮개는 근로자, 장비 등 하중의 O배 이상을 견딜 수 있어야 한다. (숫자만 입력)", type: "input", answer: "2" },
                     { q: "개구부 덮개를 설치할 때 준수해야 할 사항으로 가장 중요한 것은?", type: "choice", options: ["뒤집히거나 떨어지지 않도록 고정", "눈에 잘 띄는 색으로 도색", "위험 경고표지 부착", "쉽게 열 수 있도록 손잡이 설치"], a: 0 },
                     { q: "엘리베이터 개구부용 난간대는 몇 단 이상 설치해야 하는가?", type: "choice", options: ["2단", "1단", "3단", "임의 설치"], a: 0 },
-                    { q: "난간 설치가 곤란한 단부 작업 시 필수 안전 조치는?", type: "choice", options: ["안전대 착용 및 부착설비", "2인 1조로 작업", "작업지휘자 배치", "안전교육 실시후 작업"], a: 0 }
+                    { q: "난간 설치가 곤란한 단부 작업 시 필수 안전 조치는?", type: "choice", options: ["안전대 착용 및 부착설비", "작업 중지", "조심해서 작업", "빨리 작업 끝내기"], a: 0 }
                 ]
             },
             { 
@@ -353,12 +352,16 @@
                 prompt: "construction scaffolding exterior building steel pipes safety photorealistic", seed: 303, color: "bg-orange-500", imgSrc: null,
                 questions: [
                     { q: "연약지반에 비계 기둥 설치 시 침하 방지를 위해 두께 OOmm 이상의 깔목을 사용해야 한다. (숫자만 입력)", type: "input", answer: "45" },
-                    { q: "비계 기둥 간격은 띠장 방향 1.8m, 장선 방향 O.Om 이하여야 한다. (소수점 포함)", type: "input", answer: "1.5" },
+                    { q: "비계 기둥 간격은 띠장 방향 O.OOm, 장선방향 O.Om 이하여야 한다. (숫자 2개 순서대로 입력, 콤마로 구분)", type: "input", answer: ["1.85", "1.5"] },
                     { q: "강관 비계의 벽이음 설치 간격은 수직, 수평방향 Om 이내마다 설치한다. (숫자만 입력)", type: "input", answer: "5" },
                     { q: "기둥 간격 10m 이내마다 40~60도로 교차하도록 OO를 설치해야 한다.", type: "choice", options: ["가새", "벽이음", "버팀대", "받침철물"], a: 0 },
                     { q: "작업발판의 폭은 OOcm 이상이어야 한다. (숫자만 입력)", type: "input", answer: "40" },
                     { q: "작업발판 재료 간의 틈은 Ocm 이하로 해야 한다. (숫자만 입력)", type: "input", answer: "3" },
-                    { q: "시스템 비계의 상부 난간대 높이는 O.Om 이상이어야 한다. (소수점 포함)", type: "input", answer: "0.9" }
+                    { q: "시스템 비계의 상부 난간대 높이는 O.Om 이상이어야 한다. (소수점 포함)", type: "input", answer: "0.9" },
+                    { q: "높이 OOm 이상 비계 및 브라켓 비계는 건축구조기술사 등의 구조검토가 필수이다. (숫자만 입력)", type: "input", answer: "31" },
+                    { q: "강관 비계 기둥 하부는 O개 이상을 밑둥잡이로 연결하여야 한다. (단, 받침철물 고정 시 생략 가능) (숫자만 입력)", type: "input", answer: "3" },
+                    { q: "비계 파이프와 발판 사이의 틈새는 OOcm 이내여야 한다. (숫자만 입력)", type: "input", answer: "10" },
+                    { q: "시스템 비계 최하부 수직재와 받침철물의 겹침길이는 전체길이의 O분의 1 이상이어야 한다. (숫자만 입력)", type: "input", answer: "3" }
                 ]
             },
             { id: 4, title: "4. 사다리", 
@@ -422,7 +425,7 @@
                     { q: "굴착기 후사경은 어떤 상태여야 하는가?", type: "choice", options: ["정상위치에 견고하게 설치", "운전자 시야에 맞게 조정", "깨끗하게 닦아서 사용", "보조 거울 부착"], a: 0 },
                     { q: "작업반경 내 접근금지 표지를 어디에 부착해야 하는가?", type: "choice", options: ["후면 등 잘 보이는 곳", "운전석 내부", "버킷 측면", "유압 실린더"], a: 0 },
                     { q: "굴착기로 화물을 인양하는 작업은?", type: "choice", options: ["원칙적 금지", "가능", "권장", "편리함"], a: 0 },
-                    { q: "운전석 이탈 시 버킷의 위치는?", type: "choice", options: ["지면에 내려놓음", "공중에 들어올림", "작업 위치에 고정", "측면으로 이동"], a: 0 },
+                    { q: "운전석 이탈 시 버킷의 위치는?", type: "choice", options: ["지면에 내려놓음", "공중에 듬", "흔들리게 둠", "상관없음"], a: 0 },
                     { q: "굴착기 작업 반경 내 충돌 방지 조치는?", type: "choice", options: ["유도자 배치 및 출입금지", "경광등 설치", "작업지휘자 배치", "접근금지 표지판 설치"], a: 0 }
                 ]
             },
@@ -511,15 +514,15 @@
               questions: [
                 { q: "운행 중 출입문 상태는?", type: "choice", options: ["닫혀 있어야 함", "열어둠", "반만 닫음", "상황 따라"], a: 0 },
                 { q: "탑승 시 적재 하중 기준은?", type: "choice", options: ["정격 하중 이내", "최대", "공간 만큼", "무제한"], a: 0 },
-                { q: "설치, 해체 시 필요한 조치는?", type: "choice", options: ["작업지휘자 배치", "안전관리자 배치", "신호수 배치", "경비원 배치"], a: 0 },
-                { q: "운반구 입구 낙하물 방지 시설은?", type: "choice", options: ["방호선반", "낙하물방지망", "안전난간", "접근금지울타리"], a: 0 },
-                { q: "충돌 방지 안전장치는?", type: "choice", options: ["권과방지장치", "과부하방지장치", "비상정지장치", "출입문 연동장치"], a: 0 }
+                { q: "설치, 해체 시 필요한 조치는?", type: "choice", options: ["작업지휘자 배치", "작업자 자율", "신속 작업", "야간 작업"], a: 0 },
+                { q: "운반구 입구 낙하물 방지 시설은?", type: "choice", options: ["방호선반", "우산", "천막", "없음"], a: 0 },
+                { q: "충돌 방지 안전장치는?", type: "choice", options: ["권과방지장치", "속도계", "비상벨", "쿠션"], a: 0 }
             ]},
             { id: 18, title: "18. 용접장치", 
               prompt: "welding work sparks flying fire extinguisher nearby construction site photorealistic", seed: 1818, color: "bg-red-600", imgSrc: null,
               questions: [
-                { q: "불티 비산 화재 예방 조치는?", type: "choice", options: ["불티비산방지포 사용", "소화기 비치", "가연물 제거", "화재감시자 배치"], a: 0 },
-                { q: "작업 장소 주변 필수 비치물은?", type: "choice", options: ["소화기", "방화수", "모래", "불티방지포"], a: 0 },
+                { q: "불티 비산 화재 예방 조치는?", type: "choice", options: ["불티비산방지포 사용", "신문지", "나무", "비닐"], a: 0 },
+                { q: "작업 장소 주변 필수 비치물은?", type: "choice", options: ["소화기", "물통", "선풍기", "쓰레기통"], a: 0 },
                 { q: "가스 용접 역화 방지 장치는?", type: "choice", options: ["역화방지기", "압력조정기", "안전밸브", "차단밸브"], a: 0 },
                 { q: "밀폐 공간 용접 시 질식 예방 조치는?", type: "choice", options: ["환기", "송기마스크 착용", "산소농도 측정", "감시인 배치"], a: 0 },
                 { q: "교류아크용접기 감전 예방 장치는?", type: "choice", options: ["자동전격방지기", "누전차단기", "접지설비", "절연홀더"], a: 0 }
@@ -548,6 +551,8 @@
             
             chapters.forEach(chap => {
                 const img = new Image();
+                // 이미지 URL 생성 (Pollinations AI, 크기 800x600 최적화)
+                // URL 끝에 nologo=true 추가하여 워터마크 제거 시도
                 const url = `https://pollinations.ai/p/${encodeURIComponent(chap.prompt)}?width=800&height=600&seed=${chap.seed}&nologo=true`;
                 
                 img.onload = () => {
@@ -563,6 +568,7 @@
                     }
                 };
                 img.onerror = () => {
+                    // 실패 시 재시도 또는 기본 이미지 처리 (여기선 간단히 넘어감)
                     console.warn(`Failed to load image for chapter ${chap.id}`);
                     loadedImages++;
                     chap.finalImgSrc = url; // Keep url for retry
@@ -585,7 +591,10 @@
 
                 // Use preloaded URL or generate new
                 let imgUrl = chap.finalImgSrc; 
-                if (!imgUrl) imgUrl = `https://pollinations.ai/p/${encodeURIComponent(chap.prompt)}?width=800&height=600&seed=${chap.seed}&nologo=true`;
+                if (!imgUrl) {
+                     if (chap.imgSrc) imgUrl = chap.imgSrc;
+                     else imgUrl = `https://pollinations.ai/p/${encodeURIComponent(chap.prompt)}?width=800&height=600&seed=${chap.seed}&nologo=true`;
+                }
 
                 const thumbnailHtml = `<img src="${imgUrl}" alt="${chap.title}" class="chapter-thumbnail w-full h-36 rounded-lg object-cover shadow-md mb-3">`;
 
@@ -633,8 +642,10 @@
 
             // UI Reset
             document.getElementById('game-title').innerText = currentChapter.title;
+            // 분모에 현재 챕터의 전체 문제 수 표시하도록 수정
             document.getElementById('game-progress-bar').style.width = '0%';
             document.getElementById('game-progress-text').innerText = `0/${currentChapter.questions.length}`;
+            
             document.getElementById('chapter-complete').classList.add('hidden');
             document.getElementById('question-card').classList.add('hidden');
             document.getElementById('fail-modal').classList.add('hidden');
@@ -645,7 +656,10 @@
             const loadingEl = document.getElementById('scene-loading');
             
             let imgUrl = currentChapter.finalImgSrc;
-            if (!imgUrl) imgUrl = `https://pollinations.ai/p/${encodeURIComponent(currentChapter.prompt)}?width=800&height=600&seed=${currentChapter.seed}&nologo=true`;
+            if (!imgUrl) {
+                 if (currentChapter.imgSrc) imgUrl = currentChapter.imgSrc;
+                 else imgUrl = `https://pollinations.ai/p/${encodeURIComponent(currentChapter.prompt)}?width=800&height=600&seed=${currentChapter.seed}&nologo=true`;
+            }
 
             bgEl.style.backgroundImage = `url('${imgUrl}')`;
             bgEl.classList.add('loaded');
@@ -714,8 +728,6 @@
                     left = 10 + rng() * 80;
 
                     // Check distance against existing markers
-                    // Approximate distance check using % converted to relative pixels is tricky without exact container size
-                    // Simplified check: just ensure % difference is significant (>10%)
                     for (let pos of positions) {
                         const dist = Math.sqrt(Math.pow(top - pos.t, 2) + Math.pow(left - pos.l, 2));
                         if (dist < 12) { // Min distance threshold in %
@@ -753,7 +765,21 @@
             contentDiv.innerHTML = '';
             document.getElementById('q-feedback').classList.add('hidden');
 
-            if (qData.type === 'input') {
+            if (Array.isArray(qData.answer)) {
+                // Multi-input UI
+                let inputsHTML = '';
+                qData.answer.forEach((_, i) => {
+                    inputsHTML += `<input type="text" id="ans-${i}" class="w-full bg-slate-100 border-2 border-slate-300 text-slate-800 p-3 rounded-lg text-center font-bold focus:outline-none focus:border-blue-500 mb-2" placeholder="값 ${i+1} (숫자)">`;
+                });
+                contentDiv.innerHTML = `
+                    <div class="flex flex-col gap-2">
+                        ${inputsHTML}
+                        <button id="submit-btn" class="bg-blue-600 hover:bg-blue-500 text-white px-6 rounded-lg font-bold py-3 transition w-full">확인</button>
+                    </div>
+                `;
+                const btn = contentDiv.querySelector('#submit-btn');
+                btn.onclick = () => checkAnswer(index, null); // Pass null for multi-input, handled inside
+            } else if (qData.type === 'input') {
                 contentDiv.innerHTML = `
                     <div class="flex gap-2">
                         <input type="text" id="answer-input" class="flex-1 bg-slate-100 border border-slate-300 text-slate-800 p-3 rounded-lg text-center font-bold focus:outline-none focus:border-blue-500" placeholder="정답 입력 (숫자)">
@@ -768,7 +794,6 @@
             } else {
                 const shuffledOptions = [...qData.options];
                 const correctText = qData.options[qData.a];
-                // Seeded shuffle if desired, or simple random
                 shuffledOptions.sort(() => Math.random() - 0.5);
 
                 shuffledOptions.forEach((opt) => {
@@ -791,7 +816,14 @@
             const feedback = document.getElementById('q-feedback');
             let isCorrect = false;
 
-            if (qData.type === 'input') {
+            if (Array.isArray(qData.answer)) {
+                 let allCorrect = true;
+                 qData.answer.forEach((ans, i) => {
+                     const val = document.getElementById(`ans-${i}`).value.trim();
+                     if (val !== ans) allCorrect = false;
+                 });
+                 if (allCorrect) isCorrect = true;
+            } else if (qData.type === 'input') {
                 if (String(userAnswer).trim() === String(qData.answer)) isCorrect = true;
             } else {
                 if (userAnswer === correctAnswerText) isCorrect = true;
@@ -799,7 +831,7 @@
 
             if (isCorrect) {
                 feedback.innerHTML = '<i class="fas fa-check-circle mr-2"></i>정답입니다!';
-                feedback.className = "mt-4 p-4 rounded-lg bg-green-100 text-green-700 border border-green-200 font-bold flex items-center justify-center";
+                feedback.className = "mt-6 p-4 rounded-xl text-lg font-bold bg-green-100 text-green-700 border border-green-200 flex items-center justify-center animate-pulse";
                 feedback.classList.remove('hidden');
                 
                 const marker = document.getElementById(`marker-${qIndex}`);
@@ -807,6 +839,7 @@
                 marker.innerHTML = '<i class="fas fa-check"></i>';
                 
                 solvedCount++;
+                // Update progress (Fixed logic)
                 const totalQ = currentChapter.questions.length;
                 document.getElementById('game-progress-bar').style.width = `${(solvedCount / totalQ) * 100}%`;
                 document.getElementById('game-progress-text').innerText = `${solvedCount}/${totalQ}`;
@@ -839,16 +872,16 @@
             const list = JSON.parse(localStorage.getItem('constructionHallOfFame')) || [];
             const container = document.getElementById('fame-list');
             if (list.length === 0) {
-                container.innerHTML = '<div class="p-6 text-center text-slate-400 text-sm italic">아직 등록된 마스터가 없습니다.<br>첫 번째 주인공이 되어보세요!</div>';
+                container.innerHTML = '<div class="p-10 text-center text-slate-400 text-sm italic">아직 등록된 마스터가 없습니다.<br>첫 번째 주인공이 되어보세요!</div>';
                 return;
             }
             container.innerHTML = list.map((entry, idx) => `
-                <div class="flex justify-between items-center p-3 hover:bg-slate-50 transition border-b border-slate-100 last:border-0">
+                <div class="flex justify-between items-center p-4 hover:bg-slate-50 transition border-b border-slate-100 last:border-0">
                     <div class="flex items-center">
-                        <div class="w-6 h-6 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 font-bold text-xs mr-3">${idx + 1}</div>
-                        <span class="font-bold text-slate-700">${entry.name}</span>
+                        <div class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 font-bold text-sm mr-4">${idx + 1}</div>
+                        <span class="font-bold text-slate-700 text-lg">${entry.name}</span>
                     </div>
-                    <span class="text-xs text-slate-400 font-mono">${entry.date}</span>
+                    <span class="text-sm text-slate-400 font-mono">${entry.date}</span>
                 </div>
             `).join('');
         }
