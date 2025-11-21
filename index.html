@@ -137,7 +137,6 @@
                 </div>
                 <div>
                     <h1 class="text-2xl md:text-3xl font-black tracking-tight text-slate-800">오티에르 방배 안전마스터</h1>
-                    <!-- Subtitle removed for cleaner look -->
                 </div>
             </div>
             <div class="bg-slate-100 rounded-lg px-4 py-2 border border-slate-200 flex items-center shadow-sm">
@@ -154,7 +153,6 @@
         <div id="intro-section" class="mb-8 bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-200">
             <div class="p-12 text-center relative overflow-hidden bg-gradient-to-b from-slate-50 to-white">
                 <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(#000000 1px, transparent 1px); background-size: 20px 20px;"></div>
-                <!-- Slogan -->
                 <h2 class="text-3xl md:text-5xl font-black text-slate-800 relative z-10 leading-tight break-keep mb-2">
                     현장 속 <span class="text-red-600 inline-block transform hover:scale-110 transition-transform duration-200">'?'</span>를 찾아<br>
                     핵심 지적사항을 해결하세요
@@ -171,8 +169,8 @@
             <!-- Chapters injected by JS -->
         </div>
 
-        <!-- Hall of Fame Trigger Card -->
-        <div class="mt-12 flex justify-center">
+        <!-- Hall of Fame & Reset -->
+        <div class="mt-12 flex flex-col items-center gap-4">
             <div onclick="showHallOfFame()" class="bg-white rounded-2xl shadow-xl cursor-pointer hover:scale-105 transition-transform duration-300 max-w-md w-full border-2 border-yellow-400 p-1">
                 <div class="bg-yellow-50 rounded-xl p-6 flex items-center justify-between">
                     <div class="flex items-center">
@@ -187,6 +185,11 @@
                     <i class="fas fa-chevron-right text-yellow-400"></i>
                 </div>
             </div>
+
+            <!-- Reset Button -->
+            <button onclick="resetGame()" class="text-xs text-slate-400 hover:text-red-500 transition flex items-center gap-1 py-2">
+                <i class="fas fa-trash-alt"></i> 데이터 초기화 (처음부터 다시 시작)
+            </button>
         </div>
 
         <!-- Hall of Fame Section -->
@@ -486,28 +489,28 @@
                 id: 15, title: "15. 타워크레인", 
                 prompt: "tall yellow tower crane construction site lifting concrete bucket blue sky photorealistic", seed: 1515, color: "bg-sky-600", imgSrc: null,
                 questions: [
-                    { q: "슬링벨트 폐기 기준: 봉제실이 절단되어 모양이 유지되지 않으면 어떻게 해야 하는가?", type: "choice", options: ["즉시 폐기", "보수 후 사용", "하중 줄여 사용", "비인가 작업에 사용"], a: 0 },
-                    { q: "벨트의 OO가 조금이라도 인지되면 즉시 폐기해야 한다.", type: "choice", options: ["박리", "오염", "변색", "마모"], a: 0 },
-                    { q: "운전수와 지상 작업자 간 소통을 위한 담당자는?", type: "choice", options: ["신호수", "작업반장", "무전기", "CCTV"], a: 0 },
-                    { q: "강풍 시 타워크레인 작업 기준은?", type: "choice", options: ["기준 풍속 초과 시 중지", "감속 운전", "낮은 높이 작업", "숙련자 운전"], a: 0 },
-                    { q: "인상(높이 올림) 작업 시 준수 사항은?", type: "choice", options: ["매뉴얼 준수 및 지휘자 배치", "경험 많은 작업자 배치", "신속한 작업 수행", "야간 작업 실시"], a: 0 },
-                    { q: "지지 벽체(월타이) 해체 시기는?", type: "choice", options: ["계획에 따라 순차적", "설치 역순으로", "하부부터 상부로", "필요 없는 것부터"], a: 0 }
+                    { q: "슬링벨트 폐기 기준: 봉제실이 절단되어 모양이 유지되지 않으면 어떻게 해야 하는가?", type: "choice", options: ["즉시 폐기", "수리해서 사용", "그냥 사용", "테이프 감기"], a: 0 },
+                    { q: "벨트의 OO가 조금이라도 인지되면 즉시 폐기해야 한다.", type: "choice", options: ["박리", "오염", "변색", "주름"], a: 0 },
+                    { q: "운전수와 지상 작업자 간 소통을 위한 담당자는?", type: "choice", options: ["신호수", "경비", "반장", "일용직"], a: 0 },
+                    { q: "강풍 시 타워크레인 작업 기준은?", type: "choice", options: ["기준 풍속 초과 시 중지", "강행", "천천히", "낮게"], a: 0 },
+                    { q: "인상(높이 올림) 작업 시 준수 사항은?", type: "choice", options: ["매뉴얼 준수 및 지휘자 배치", "단독 작업", "신속 작업", "야간 작업"], a: 0 },
+                    { q: "지지 벽체(월타이) 해체 시기는?", type: "choice", options: ["계획에 따라 순차적", "임의로", "미리", "아무 때나"], a: 0 }
                 ]
             },
             { id: 16, title: "16. 항타/항발기", 
               prompt: "large pile driver machine hammering foundation piles construction site photorealistic", seed: 1616, color: "bg-zinc-600", imgSrc: null,
               questions: [
                 { q: "조립, 이동 시 전도 방지 확인 사항은?", type: "choice", options: ["지반 지지력 및 평탄도", "장비 색상", "운전자", "날씨"], a: 0 },
-                { q: "작업 중 리더 전도 방지 조치는?", type: "choice", options: ["아웃트리거 및 받침대 보강", "카운터웨이트 증량", "붐대 각도 조정", "작업 반경 축소"], a: 0 },
+                { q: "작업 중 리더 전도 방지 조치는?", type: "choice", options: ["아웃트리거 및 받침대 보강", "문 개방", "경적", "청소"], a: 0 },
                 { q: "권상용 와이어로프 안전계수 기준은?", type: "choice", options: ["5 이상", "3 이상", "7 이상", "10 이상"], a: 0 },
-                { q: "작업 반경 내 근로자 접근은?", type: "choice", options: ["금지", "관계자 외 출입금지", "안전장구 착용 시 허용", "주의해서 통행"], a: 0 },
-                { q: "이동 시 갓길 붕괴 방지 조치는?", type: "choice", options: ["철판(복공판) 또는 깔목", "자갈 포설", "모래 다짐", "콘크리트 타설"], a: 0 }
+                { q: "작업 반경 내 근로자 접근은?", type: "choice", options: ["금지", "허용", "안전모 쓰면 허용", "상관없음"], a: 0 },
+                { q: "이동 시 갓길 붕괴 방지 조치는?", type: "choice", options: ["철판(복공판) 또는 깔목", "비닐", "천", "종이"], a: 0 }
             ]},
             { id: 17, title: "17. 건설용리프트", 
               prompt: "construction hoist elevator cage attached to building exterior photorealistic", seed: 1717, color: "bg-blue-700", imgSrc: null,
               questions: [
                 { q: "운행 중 출입문 상태는?", type: "choice", options: ["닫혀 있어야 함", "열어둠", "반만 닫음", "상황 따라"], a: 0 },
-                { q: "탑승 시 적재 하중 기준은?", type: "choice", options: ["정격 하중 이내", "적재 정량", "최대 하중", "안전 하중"], a: 0 },
+                { q: "탑승 시 적재 하중 기준은?", type: "choice", options: ["정격 하중 이내", "최대", "공간 만큼", "무제한"], a: 0 },
                 { q: "설치, 해체 시 필요한 조치는?", type: "choice", options: ["작업지휘자 배치", "안전관리자 배치", "신호수 배치", "경비원 배치"], a: 0 },
                 { q: "운반구 입구 낙하물 방지 시설은?", type: "choice", options: ["방호선반", "낙하물방지망", "안전난간", "접근금지울타리"], a: 0 },
                 { q: "충돌 방지 안전장치는?", type: "choice", options: ["권과방지장치", "과부하방지장치", "비상정지장치", "출입문 연동장치"], a: 0 }
@@ -660,6 +663,15 @@
             document.body.classList.remove('modal-active');
             renderChapters();
             updateTotalProgress();
+        }
+
+        // Reset Function
+        function resetGame() {
+            if(confirm("정말로 초기화하시겠습니까? 모든 진행 상황이 삭제됩니다.")) {
+                localStorage.removeItem('constructionGameProgress');
+                localStorage.removeItem('constructionHallOfFame');
+                location.reload();
+            }
         }
 
         // Seeded Random Generator
