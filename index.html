@@ -315,11 +315,11 @@
                 id: 1, title: "1. 지붕공사", 
                 prompt: "construction worker repairing roof panels industrial building blue sky danger photorealistic", seed: 101, color: "bg-blue-500", imgSrc: null,
                 questions: [
-                    { q: "지붕 위 이동 시 채광창(썬라이트) 파손으로 인한 추락을 막기 위한 조치는?", type: "choice", options: ["경고 표지판 부착", "조명 설치", "채광창 덮개 설치", "주변 정리"], a: 2 },
-                    { q: "지붕 가장자리 작업 시 추락 방지를 위한 필수 시설물은?", type: "choice", options: ["방수포", "안전난간", "적재대", "사다리"], a: 1 },
-                    { q: "지붕 작업 필수 개인보호구 조합으로 옳은 것은?", type: "choice", options: ["마스크 + 장갑", "귀마개 + 보안경", "안전모 + 안전화", "안전대 + 안전모"], a: 3 },
+                    { q: "지붕 위 이동 시 채광창(썬라이트) 파손으로 인한 추락을 막기 위한 조치는?", type: "choice", options: ["채광창 덮개 설치", "경고 표지판 부착", "조명 설치", "주변 정리"], a: 0 },
+                    { q: "지붕 가장자리 작업 시 추락 방지를 위한 필수 시설물은?", type: "choice", options: ["안전난간", "방수포", "사다리", "적재대"], a: 0 },
+                    { q: "지붕 작업 필수 개인보호구 조합으로 옳은 것은?", type: "choice", options: ["안전대 + 안전모", "마스크 + 장갑", "귀마개 + 보안경", "우비 + 장화"], a: 0 },
                     { q: "강도가 약한 슬레이트 지붕 위 작업 시 하중 분산을 위해 폭 OOcm 이상의 발판을 설치해야 한다. (숫자만 입력)", type: "input", answer: "30" },
-                    { q: "지붕 위로 자재를 올릴 때 가장 안전한 방법은?", type: "choice", options: ["던져서 올림", "승강설비나 달줄 사용", "등에 지고 이동", "여러 명이 이어받기"], a: 1 }
+                    { q: "지붕 위로 자재를 올릴 때 가장 안전한 방법은?", type: "choice", options: ["승강설비나 달줄 사용", "던져서 올림", "등에 지고 이동", "여러 명이 이어받기"], a: 0 }
                 ]
             },
             { 
@@ -330,9 +330,9 @@
                     { q: "안전난간 발끝막이판의 높이는 바닥에서 OOcm 이상이어야 한다. (숫자만 입력)", type: "input", answer: "10" },
                     { q: "안전난간 기둥의 설치 간격은 O.Om를 초과하지 않아야 한다. (소수점 포함 숫자)", type: "input", answer: "2.0" }, 
                     { q: "개구부 덮개는 근로자, 장비 등 하중의 O배 이상을 견딜 수 있어야 한다. (숫자만 입력)", type: "input", answer: "2" },
-                    { q: "개구부 덮개를 설치할 때 준수해야 할 사항으로 가장 중요한 것은?", type: "choice", options: ["가볍게 얹어놓기", "작업 편의를 위해 수시로 개방", "뒤집히거나 떨어지지 않도록 고정", "눈에 띄지 않게 색칠하기"], a: 2 },
-                    { q: "엘리베이터 개구부용 난간대는 몇 단 이상 설치해야 하는가?", type: "choice", options: ["1단", "임의 설치", "2단", "설치 안함"], a: 2 },
-                    { q: "난간 설치가 곤란한 단부 작업 시 필수 안전 조치는?", type: "choice", options: ["작업 중지", "안전대 착용 및 부착설비", "조심해서 작업", "빨리 작업 끝내기"], a: 1 }
+                    { q: "개구부 덮개를 설치할 때 준수해야 할 사항으로 가장 중요한 것은?", type: "choice", options: ["뒤집히거나 떨어지지 않도록 고정", "가볍게 얹어놓기", "눈에 띄지 않게 색칠하기", "작업 편의를 위해 수시로 개방"], a: 0 },
+                    { q: "엘리베이터 개구부용 난간대는 몇 단 이상 설치해야 하는가?", type: "choice", options: ["2단", "1단", "설치 안함", "상관없음"], a: 0 },
+                    { q: "난간 설치가 곤란한 단부 작업 시 필수 안전 조치는?", type: "choice", options: ["안전대 착용 및 부착설비", "작업 중지", "조심해서 작업", "빨리 작업 끝내기"], a: 0 }
                 ]
             },
             { 
@@ -342,7 +342,7 @@
                     { q: "연약지반에 비계 기둥 설치 시 침하 방지를 위해 두께 OOmm 이상의 깔목을 사용해야 한다. (숫자만 입력)", type: "input", answer: "45" },
                     { q: "비계 기둥 간격은 띠장 방향 1.8m, 장선 방향 O.Om 이하여야 한다. (소수점 포함)", type: "input", answer: "1.5" },
                     { q: "강관 비계의 벽이음 설치 간격은 수직, 수평방향 Om 이내마다 설치한다. (숫자만 입력)", type: "input", answer: "5" },
-                    { q: "기둥 간격 10m 이내마다 40~60도로 교차하도록 OO를 설치해야 한다.", type: "choice", options: ["띠장", "가새", "발판", "장선"], a: 1 },
+                    { q: "기둥 간격 10m 이내마다 40~60도로 교차하도록 OO를 설치해야 한다.", type: "choice", options: ["가새", "띠장", "장선", "발판"], a: 0 },
                     { q: "작업발판의 폭은 OOcm 이상이어야 한다. (숫자만 입력)", type: "input", answer: "40" },
                     { q: "작업발판 재료 간의 틈은 Ocm 이하로 해야 한다. (숫자만 입력)", type: "input", answer: "3" },
                     { q: "시스템 비계의 상부 난간대 높이는 O.Om 이상이어야 한다. (소수점 포함)", type: "input", answer: "0.9" }
@@ -351,66 +351,66 @@
             { id: 4, title: "4. 사다리", 
               prompt: "A-frame ladder standing on construction floor worker safety photorealistic", seed: 404, color: "bg-yellow-500", imgSrc: null,
               questions: [
-                { q: "이동식 사다리의 주된 사용 용도는?", type: "choice", options: ["작업 발판", "이동 통로", "휴식 공간", "자재 적재"], a: 1 },
-                { q: "A형 사다리 사용 시 전도 방지 조치는?", type: "choice", options: ["단독 작업으로 신속 처리", "아웃트리거 설치 및 2인 1조", "사다리 하부 고정", "안전대 착용"], a: 1 },
-                { q: "사다리 작업 시 필수 착용 보호구는?", type: "choice", options: ["안전화", "보안경", "안전모", "각반"], a: 2 },
-                { q: "사다리 최상부 발판에서 작업은?", type: "choice", options: ["가능하다", "금지된다", "안전대 착용 시 가능", "2인 1조 시 가능"], a: 1 },
+                { q: "이동식 사다리의 주된 사용 용도는?", type: "choice", options: ["이동 통로", "작업 발판", "자재 적재", "휴식 공간"], a: 0 },
+                { q: "A형 사다리 사용 시 전도 방지 조치는?", type: "choice", options: ["아웃트리거 설치 및 2인 1조", "단독 작업으로 신속 처리", "사다리 하부 고정", "안전대 착용"], a: 0 },
+                { q: "사다리 작업 시 필수 착용 보호구는?", type: "choice", options: ["안전모", "보안경", "귀마개", "마스크"], a: 0 },
+                { q: "사다리 최상부 발판에서 작업은?", type: "choice", options: ["금지된다", "가능하다", "잠깐은 괜찮다", "낮으면 괜찮다"], a: 0 },
                 { q: "사다리 바닥은 어떤 상태여야 하는가?", type: "choice", options: ["평탄하고 견고하며 미끄럼 없는 곳", "경사가 약간 있는 곳", "모래나 자갈 바닥", "습기가 있는 바닥"], a: 0 },
-                { q: "고정식 사다리 길이가 10m 이상일 때 5m마다 설치해야 하는 것은?", type: "choice", options: ["등받이울", "안전블록", "계단참", "추락방지대"], a: 2 }
+                { q: "고정식 사다리 길이가 10m 이상일 때 5m마다 설치해야 하는 것은?", type: "choice", options: ["계단참", "의자", "조명", "손잡이"], a: 0 }
             ]},
             { id: 5, title: "5. 철골공사", 
               prompt: "steel beam structure construction skeleton sky background photorealistic", seed: 505, color: "bg-gray-600", imgSrc: null,
               questions: [
-                { q: "철골 보 위 이동 시 안전대 죔줄을 어디에 체결해야 하는가?", type: "choice", options: ["철골 기둥", "설치된 구명줄", "트러스트", "가새"], a: 1 },
-                { q: "철골 인양 시 자재 낙하 방지를 위한 줄걸이 방법은?", type: "choice", options: ["1줄 걸이", "3줄 걸이", "2줄 걸이", "체인 사용"], a: 2 },
+                { q: "철골 보 위 이동 시 안전대 죔줄을 어디에 체결해야 하는가?", type: "choice", options: ["설치된 구명줄", "철골 기둥", "아무 곳이나", "체결하지 않음"], a: 0 },
+                { q: "철골 인양 시 자재 낙하 방지를 위한 줄걸이 방법은?", type: "choice", options: ["2줄 걸이", "1줄 걸이", "대충 묶기", "체인 1개"], a: 0 },
                 { q: "철골 작업 중지 기준이 되는 기상 상황은?", type: "choice", options: ["강풍, 폭우, 폭설", "흐린 날씨", "약한 바람", "더운 날씨"], a: 0 },
-                { q: "철골 하부 낙하물 사고 예방 시설은?", type: "choice", options: ["안전난간", "수직보호망", "추락방호망(낙하물방지망)", "방호선반"], a: 2 },
-                { q: "철골 기둥 승강 시 사용하는 안전 설비는?", type: "choice", options: ["사다리", "수직 구명줄 및 승강 트랩", "고소작업대", "비계"], a: 1 },
-                { q: "철골 부재 용접 시 화재 예방을 위해 설치해야 하는 것은?", type: "choice", options: ["소화기", "불티비산방지포", "방화수", "화재감시자"], a: 1 },
-                { q: "철골 보 인양 전 지상에서 미리 설치해야 하는 것은?", type: "choice", options: ["안전난간", "안전대 부착설비", "작업발판", "승강설비"], a: 1 }
+                { q: "철골 하부 낙하물 사고 예방 시설은?", type: "choice", options: ["추락방호망(낙하물방지망)", "비닐", "철판", "안전테이프"], a: 0 },
+                { q: "철골 기둥 승강 시 사용하는 안전 설비는?", type: "choice", options: ["수직 구명줄 및 승강 트랩", "사다리차", "로프", "엘리베이터"], a: 0 },
+                { q: "철골 부재 용접 시 화재 예방을 위해 설치해야 하는 것은?", type: "choice", options: ["불티비산방지포", "선풍기", "가림막", "표지판"], a: 0 },
+                { q: "철골 보 인양 전 지상에서 미리 설치해야 하는 것은?", type: "choice", options: ["안전대 부착설비", "조명", "간판", "안테나"], a: 0 }
             ]},
             { 
                 id: 6, title: "6. 거푸집동바리", 
                 prompt: "construction site ceiling supported by many steel pipe props shoring photorealistic", seed: 606, color: "bg-amber-600", imgSrc: null,
                 questions: [
-                    { q: "동바리 설치 시 반드시 준수해야 할 문서는?", type: "choice", options: ["시방서", "작업지침서", "구조검토 된 조립도", "안전관리계획서"], a: 2 },
+                    { q: "동바리 설치 시 반드시 준수해야 할 문서는?", type: "choice", options: ["구조검토 된 조립도", "작업자 직감", "인터넷 사진", "이전 현장 방식"], a: 0 },
                     { q: "강관 동바리 높이가 O.Om 초과 시 높이 2m 이내마다 수평연결재를 설치해야 한다. (소수점 포함)", type: "input", answer: "3.5" },
-                    { q: "동바리 하부 침하 방지를 위해 설치해야 하는 것은?", type: "choice", options: ["물 뿌리기", "깔목 또는 깔판", "모래 깔기", "그냥 설치"], a: 1 },
-                    { q: "상하부 동바리는 동일 OO선상에 위치해야 한다.", type: "choice", options: ["동일 수직선상", "수평", "교차 방향", "지그재그"], a: 0 },
-                    { q: "콘크리트 타설 중 붕괴 징후 감시 대상은?", type: "choice", options: ["콘크리트 타설 속도", "작업자 피로도", "거푸집 및 동바리 변형", "장비 가동 상태"], a: 2 }
+                    { q: "동바리 하부 침하 방지를 위해 설치해야 하는 것은?", type: "choice", options: ["깔목 또는 깔판", "물 뿌리기", "모래 깔기", "그냥 설치"], a: 0 },
+                    { q: "상하부 동바리는 동일 OO선상에 위치해야 한다.", type: "choice", options: ["수직", "수평", "대각", "임의"], a: 0 },
+                    { q: "콘크리트 타설 중 붕괴 징후 감시 대상은?", type: "choice", options: ["거푸집 및 동바리 변형", "콘크리트 색상", "날씨", "작업자 수"], a: 0 }
                 ]
             },
             { id: 7, title: "7. 이동식비계", 
               prompt: "mobile rolling scaffold tower indoor construction site photorealistic", seed: 707, color: "bg-purple-500", imgSrc: null,
               questions: [
-                { q: "이동식 비계 위 작업 시 바퀴 상태는?", type: "choice", options: ["브레이크(잠금장치) 고정", "바퀴 고임목 설치", "아웃트리거 설치", "평탄한 곳으로 이동"], a: 0 },
-                { q: "이동식 비계의 넘어짐 방지를 위한 지지대는?", type: "choice", options: ["가새", "벽이음", "아웃트리거", "버팀대"], a: 2 },
-                { q: "이동식 비계 최상부 작업 시 필수 설치물은?", type: "choice", options: ["작업발판", "안전난간", "사다리", "안전대 부착설비"], a: 1 },
-                { q: "작업자가 탄 채로 이동식 비계를 이동하는 것은?", type: "choice", options: ["절대 금지", "안전대 착용 시 가능", "평탄한 바닥 이동 시 가능", "관리자 감독 하에 가능"], a: 0 },
-                { q: "비계 승강 시 이용해야 하는 것은?", type: "choice", options: ["비계 기둥", "교차 가새", "설치된 사다리", "외부 비계"], a: 2 },
+                { q: "이동식 비계 위 작업 시 바퀴 상태는?", type: "choice", options: ["브레이크(잠금장치) 고정", "풀어둠", "상관없음", "제거함"], a: 0 },
+                { q: "이동식 비계의 넘어짐 방지를 위한 지지대는?", type: "choice", options: ["아웃트리거", "사다리", "로프", "벽돌"], a: 0 },
+                { q: "이동식 비계 최상부 작업 시 필수 설치물은?", type: "choice", options: ["안전난간", "의자", "파라솔", "깃발"], a: 0 },
+                { q: "작업자가 탄 채로 이동식 비계를 이동하는 것은?", type: "choice", options: ["절대 금지", "천천히는 가능", "평지는 가능", "관리자 승인 시 가능"], a: 0 },
+                { q: "비계 승강 시 이용해야 하는 것은?", type: "choice", options: ["설치된 사다리", "비계 기둥", "교차가새", "점프"], a: 0 },
                 { q: "작업발판의 최대 적재하중은 OOOkg을 초과하지 않아야 한다. (숫자만 입력)", type: "input", answer: "250" },
                 { q: "이동식 비계 설치 높이는 밑변 최소폭의 O배 이내로 한다. (숫자만 입력)", type: "input", answer: "4" }
             ]},
             { id: 8, title: "8. 달비계", 
               prompt: "construction worker painting high rise building exterior wall on hanging rope chair safety harness photorealistic", seed: 808, color: "bg-teal-500", imgSrc: null,
               questions: [
-                { q: "달비계 작업 로프 외에 안전대를 체결해야 하는 별도의 줄은?", type: "choice", options: ["보조 로프", "작업용 로프", "수직 구명줄", "안전 난간"], a: 2 },
-                { q: "로프가 건물 모서리에 닿아 끊어지는 것을 막는 조치는?", type: "choice", options: ["마모방지 보호대 설치", "로프 2겹 사용", "고무판 설치", "테이핑 처리"], a: 0 },
-                { q: "작업 로프 고정 원칙은?", type: "choice", options: ["2개소 이상 견고한 고정점에 결속", "난간대에 튼튼하게 결속", "무거운 구조물에 결속", "작업자가 직접 지지"], a: 0 },
-                { q: "작업 의자 탑승 시 필수 보호구는?", type: "choice", options: ["안전대", "구명조끼", "안전화", "보안경"], a: 0 },
-                { q: "로프 상태 점검 시 폐기 기준은?", type: "choice", options: ["오염된 로프", "소선 절단 및 심한 손상", "습기를 머금은 로프", "색이 바랜 로프"], a: 1 }
+                { q: "달비계 작업 로프 외에 안전대를 체결해야 하는 별도의 줄은?", type: "choice", options: ["수직 구명줄", "작업줄", "전선", "고무줄"], a: 0 },
+                { q: "로프가 건물 모서리에 닿아 끊어지는 것을 막는 조치는?", type: "choice", options: ["마모방지 보호대 설치", "테이핑", "무시", "매듭 짓기"], a: 0 },
+                { q: "작업 로프 고정 원칙은?", type: "choice", options: ["2개소 이상 견고한 고정점에 결속", "난간에 대충", "무거운 물건에", "동료가 잡기"], a: 0 },
+                { q: "작업 의자 탑승 시 필수 보호구는?", type: "choice", options: ["안전대", "우비", "마스크", "장화"], a: 0 },
+                { q: "로프 상태 점검 시 폐기 기준은?", type: "choice", options: ["소선 절단 및 심한 손상", "약간의 오염", "색 바램", "1회 사용"], a: 0 }
             ]},
             { 
                 id: 9, title: "9. 굴착기", 
                 prompt: "yellow heavy construction excavator digging ground with bucket side view photorealistic", seed: 999, color: "bg-yellow-600", imgSrc: null,
                 questions: [
-                    { q: "굴착기 운전 전 퀵커플러의 OOO 체결 여부를 반드시 확인해야 한다.", type: "choice", options: ["안전핀", "고정볼트", "유압호스", "연결고리"], a: 0 },
+                    { q: "굴착기 운전 전 퀵커플러의 OOO 체결 여부를 반드시 확인해야 한다.", type: "choice", options: ["안전핀", "나사", "고무줄", "체인"], a: 0 },
                     { q: "굴착기 후면에는 카메라와 OO방지봉을 2개 이상 설치해야 한다.", type: "choice", options: ["협착", "충돌", "전도", "낙하"], a: 0 },
-                    { q: "굴착기 후사경은 어떤 상태여야 하는가?", type: "choice", options: ["정상위치에 견고하게 설치", "운전자 시야에 맞게 조정", "깨끗하게 닦아서 사용", "보조 거울 부착"], a: 0 },
-                    { q: "작업반경 내 접근금지 표지를 어디에 부착해야 하는가?", type: "choice", options: ["후면 등 잘 보이는 곳", "운전석 내부", "버킷 측면", "유압 실린더"], a: 0 },
-                    { q: "굴착기로 화물을 인양하는 작업은?", type: "choice", options: ["원칙적 금지", "신호수 배치 시 가능", "지반이 견고할 때 가능", "가벼운 물건은 가능"], a: 0 },
-                    { q: "운전석 이탈 시 버킷의 위치는?", type: "choice", options: ["지면에 내려놓음", "공중에 들어올림", "작업 위치에 고정", "측면으로 이동"], a: 0 },
-                    { q: "굴착기 작업 반경 내 충돌 방지 조치는?", type: "choice", options: ["유도자 배치 및 출입금지", "경광등 설치", "작업지휘자 배치", "접근금지 표지판 설치"], a: 0 }
+                    { q: "굴착기 후사경은 어떤 상태여야 하는가?", type: "choice", options: ["정상위치에 견고하게 설치", "제거", "깨진 상태", "아무렇게나"], a: 0 },
+                    { q: "작업반경 내 접근금지 표지를 어디에 부착해야 하는가?", type: "choice", options: ["후면 등 잘 보이는 곳", "바닥", "버켓", "운전석 내부"], a: 0 },
+                    { q: "굴착기로 화물을 인양하는 작업은?", type: "choice", options: ["원칙적 금지", "가능", "권장", "편리함"], a: 0 },
+                    { q: "운전석 이탈 시 버킷의 위치는?", type: "choice", options: ["지면에 내려놓음", "공중에 듬", "흔들리게 둠", "상관없음"], a: 0 },
+                    { q: "굴착기 작업 반경 내 충돌 방지 조치는?", type: "choice", options: ["유도자 배치 및 출입금지", "경적", "소리치기", "작업 속도 증가"], a: 0 }
                 ]
             },
             { 
@@ -419,21 +419,21 @@
                 questions: [
                     { q: "고소작업대의 과상승방지장치는 작업대 상부 OOmm 이상의 높이에 설치해야 한다. (숫자만 입력)", type: "input", answer: "600" },
                     { q: "고소작업대 과상승방지장치는 최소 O개소 이상 설치해야 한다. (숫자만 입력)", type: "input", answer: "2" },
-                    { q: "건설기계 조작에 따른 산업재해 방지 사항을 누구에게 주지시켜야 하는가?", type: "choice", options: ["조작하는 사람", "작업 지휘자", "현장 소장", "안전 관리자"], a: 0 },
-                    { q: "고소작업대 탑승 시 안전대 체결 위치는?", type: "choice", options: ["작업대 난간", "붐대", "차량 본체", "주변 구조물"], a: 0 },
-                    { q: "전도 방지를 위해 설치해야 하는 것은?", type: "choice", options: ["아웃트리거", "고임목", "안전콘", "바퀴 스토퍼"], a: 0 },
-                    { q: "작업대 난간을 밟고 올라가 작업하는 것은?", type: "choice", options: ["금지", "안전대 착용 시 가능", "2인 1조 시 가능", "높이가 낮을 때 가능"], a: 0 }, 
-                    { q: "작업 지면의 상태 조건은?", type: "choice", options: ["평평하고 단단함", "경사가 완만함", "습기가 없음", "장애물이 없음"], a: 0 }
+                    { q: "건설기계 조작에 따른 산업재해 방지 사항을 누구에게 주지시켜야 하는가?", type: "choice", options: ["조작하는 사람", "발주자", "경비원", "지나가는 사람"], a: 0 },
+                    { q: "고소작업대 탑승 시 안전대 체결 위치는?", type: "choice", options: ["작업대 난간", "작업자 허리", "건물 벽", "바닥"], a: 0 },
+                    { q: "전도 방지를 위해 설치해야 하는 것은?", type: "choice", options: ["아웃트리거", "고임목", "모래", "앵커"], a: 0 },
+                    { q: "작업대 난간을 밟고 올라가 작업하는 것은?", type: "choice", options: ["금지", "가능", "상황에 따라", "높이 부족 시"], a: 0 }, 
+                    { q: "작업 지면의 상태 조건은?", type: "choice", options: ["평평하고 단단함", "경사짐", "울퉁불퉁함", "진흙"], a: 0 }
                 ]
             },
             { id: 11, title: "11. 트럭", 
               prompt: "dump truck rear view construction site earthwork photorealistic", seed: 1111, color: "bg-green-600", imgSrc: null,
               questions: [
-                { q: "덤프트럭 후진 시 필요한 조치는?", type: "choice", options: ["유도자 배치", "후방카메라 확인", "경적 울리기", "비상등 점멸"], a: 0 },
-                { q: "적재함 위 작업 시 금지 사항은?", type: "choice", options: ["난간에 매달리거나 뛰어내림", "안전모 미착용", "적재함 내 이동", "휴식 취하기"], a: 0 },
-                { q: "경사지 주차 시 밀림 방지 조치는?", type: "choice", options: ["고임목 설치", "주차 브레이크 체결", "핸들 꺾어두기", "저단 기어 체결"], a: 0 },
-                { q: "적재함 정비 시 불시 하강 방지 장치는?", type: "choice", options: ["안전블록(안전지주)", "나무토막 고임", "유압 밸브 잠금", "크레인으로 지지"], a: 0 },
-                { q: "사내 차량 이동 통로와 보행자 통로는?", type: "choice", options: ["구분하여 설치", "겸용으로 사용", "차량 우선 통행", "보행자 우선 통행"], a: 0 }
+                { q: "덤프트럭 후진 시 필요한 조치는?", type: "choice", options: ["유도자 배치", "빠르게 후진", "경적만 울림", "비상등"], a: 0 },
+                { q: "적재함 위 작업 시 금지 사항은?", type: "choice", options: ["난간에 매달리거나 뛰어내림", "안전모 착용", "안전화 착용", "정차 후 작업"], a: 0 },
+                { q: "경사지 주차 시 밀림 방지 조치는?", type: "choice", options: ["고임목 설치", "기어 중립", "문 개방", "와이퍼 작동"], a: 0 },
+                { q: "적재함 정비 시 불시 하강 방지 장치는?", type: "choice", options: ["안전블록(안전지주)", "막대기", "사람이 받침", "없음"], a: 0 },
+                { q: "사내 차량 이동 통로와 보행자 통로는?", type: "choice", options: ["구분하여 설치", "혼용", "상관없음", "차량 우선"], a: 0 }
             ]},
             { 
                 id: 12, title: "12. 이동식크레인", 
@@ -441,75 +441,75 @@
                 questions: [
                     { q: "양중장비를 사용하는 사업장은 작업반경 밖에서 장비를 유도하는 OOO를 배치해야 한다.", type: "choice", options: ["신호수", "감시자", "경비원", "보조원"], a: 0 },
                     { q: "신호수는 양중물을 목적된 장소로 안전하게 OO해야 한다.", type: "choice", options: ["유도", "운반", "적재", "고정"], a: 0 },
-                    { q: "크레인 작업 전 전도 방지를 위해 펼쳐야 하는 것은?", type: "choice", options: ["아웃트리거", "붐대", "카운터웨이트", "운전석"], a: 0 },
-                    { q: "인양 중 로프 이탈 방지 장치는?", type: "choice", options: ["훅 해지장치", "안전 걸쇠", "이탈 방지핀", "고정 클립"], a: 0 },
-                    { q: "인양물 아래로 사람이 통행하는 것은?", type: "choice", options: ["금지", "신속하게 통과", "안전모 착용 시 허용", "신호수 통제 하에 허용"], a: 0 },
-                    { q: "전선 인근 작업 시 위험 요인은?", type: "choice", options: ["감전", "화재", "단락", "통신장애"], a: 0 },
-                    { q: "정격 하중 초과 인양은?", type: "choice", options: ["금지", "10% 이내 초과 가능", "지반 보강 시 가능", "전문가 입회 하에 가능"], a: 0 }
+                    { q: "크레인 작업 전 전도 방지를 위해 펼쳐야 하는 것은?", type: "choice", options: ["아웃트리거", "붐대", "문", "안테나"], a: 0 },
+                    { q: "인양 중 로프 이탈 방지 장치는?", type: "choice", options: ["훅 해지장치", "고무줄", "테이프", "자석"], a: 0 },
+                    { q: "인양물 아래로 사람이 통행하는 것은?", type: "choice", options: ["금지", "가능", "안전모 쓰면 가능", "뛰어서 가능"], a: 0 },
+                    { q: "전선 인근 작업 시 위험 요인은?", type: "choice", options: ["감전", "화재", "추락", "소음"], a: 0 },
+                    { q: "정격 하중 초과 인양은?", type: "choice", options: ["금지", "가능", "급할 때 가능", "운전수 재량"], a: 0 }
                 ]
             },
             { id: 13, title: "13. 굴착사면", 
               prompt: "excavation slope soil trench construction danger photorealistic", seed: 1313, color: "bg-amber-700", imgSrc: null,
               questions: [
-                { q: "굴착 사면 붕괴 방지를 위한 기본 원칙은?", type: "choice", options: ["적정 기울기 준수", "비닐 덮기", "배수로 설치", "표면 다짐"], a: 0 },
-                { q: "우천 후 작업 전 점검 사항은?", type: "choice", options: ["사면 균열 및 변형", "토사 유실", "지하수위 상승", "동결 융해"], a: 0 },
-                { q: "굴착 상부 가장자리에 중량물 적재 시 위험은?", type: "choice", options: ["붕괴", "낙하", "전도", "침하"], a: 0 },
-                { q: "붕괴 위험이 있는 급경사면에 설치하는 것은?", type: "choice", options: ["흙막이 지보공", "방호망", "차수벽", "옹벽"], a: 0 },
-                { q: "사면의 굴러떨어질 위험이 있는 돌(부석) 조치는?", type: "choice", options: ["사전 제거", "접근 금지", "보호망 설치", "경고 표지 부착"], a: 0 },
+                { q: "굴착 사면 붕괴 방지를 위한 기본 원칙은?", type: "choice", options: ["적정 기울기 준수", "물 뿌리기", "비닐 제거", "돌 쌓기"], a: 0 },
+                { q: "우천 후 작업 전 점검 사항은?", type: "choice", options: ["사면 균열 및 변형", "먼지", "풀", "햇빛"], a: 0 },
+                { q: "굴착 상부 가장자리에 중량물 적재 시 위험은?", type: "choice", options: ["붕괴", "분실", "불편", "미관"], a: 0 },
+                { q: "붕괴 위험이 있는 급경사면에 설치하는 것은?", type: "choice", options: ["흙막이 지보공", "안전난간", "표지판", "천막"], a: 0 },
+                { q: "사면의 굴러떨어질 위험이 있는 돌(부석) 조치는?", type: "choice", options: ["사전 제거", "방치", "표시만", "피해서 작업"], a: 0 },
                 { q: "굴착면 기울기 기준: 모래는 1 : O.O (소수점 포함)", type: "input", answer: "1.8" }
             ]},
             { 
                 id: 14, title: "14. 흙막이지보공", 
                 prompt: "underground deep excavation site steel strut shoring system retaining wall construction photorealistic", seed: 1414, color: "bg-stone-600", imgSrc: null,
                 questions: [
-                    { q: "흙막이 설치 시 준수해야 할 기준은?", type: "choice", options: ["구조검토 된 조립도", "시공계획서", "지반조사보고서", "표준시방서"], a: 0 },
-                    { q: "띠장의 연결보강은 어디에 명시된 대로 시공해야 하는가?", type: "choice", options: ["도면", "시방서", "작업지시서", "안전수칙"], a: 0 },
+                    { q: "흙막이 설치 시 준수해야 할 기준은?", type: "choice", options: ["구조검토 된 조립도", "경험", "영상", "옆 현장"], a: 0 },
+                    { q: "띠장의 연결보강은 어디에 명시된 대로 시공해야 하는가?", type: "choice", options: ["도면", "구두지시", "작업자판단", "인터넷"], a: 0 },
                     { q: "흙막이 볼트 여장은 너트면에서 돌출된 나사산이 O~6개의 범위여야 한다. (숫자만 입력)", type: "input", answer: "1" },
                     { q: "흙막이 판은 굴착 후 어떻게 해야 하는가?", type: "choice", options: ["신속히 설치", "천천히 설치", "나중에 설치", "설치 안함"], a: 0 },
                     { q: "인접 흙막이 판 사이에 OO가 발생하지 않도록 해야 한다.", type: "choice", options: ["틈새", "먼지", "소음", "진동"], a: 0 },
-                    { q: "변위나 토압 변화 감지를 위한 장치는?", type: "choice", options: ["계측기", "CCTV", "경보기", "수위계"], a: 0 },
-                    { q: "흙막이 배면에 물이 찰 경우 조치는?", type: "choice", options: ["배수 조치", "차수 그라우팅", "토사 치환", "작업 중지"], a: 0 },
-                    { q: "버팀보 위 이동 시 설치해야 하는 것은?", type: "choice", options: ["안전통로", "가설계단", "작업발판", "사다리"], a: 0 }
+                    { q: "변위나 토압 변화 감지를 위한 장치는?", type: "choice", options: ["계측기", "CCTV", "조명", "온도계"], a: 0 },
+                    { q: "흙막이 배면에 물이 찰 경우 조치는?", type: "choice", options: ["배수 조치", "물 채우기", "흙 채우기", "무시"], a: 0 },
+                    { q: "버팀보 위 이동 시 설치해야 하는 것은?", type: "choice", options: ["안전통로", "미끄럼틀", "징검다리", "없음"], a: 0 }
                 ]
             },
             { 
                 id: 15, title: "15. 타워크레인", 
                 prompt: "tall yellow tower crane construction site lifting concrete bucket blue sky photorealistic", seed: 1515, color: "bg-sky-600", imgSrc: null,
                 questions: [
-                    { q: "슬링벨트 폐기 기준: 봉제실이 절단되어 모양이 유지되지 않으면 어떻게 해야 하는가?", type: "choice", options: ["즉시 폐기", "보수 후 사용", "하중 줄여 사용", "비인가 작업에 사용"], a: 0 },
-                    { q: "벨트의 OO가 조금이라도 인지되면 즉시 폐기해야 한다.", type: "choice", options: ["박리", "오염", "변색", "마모"], a: 0 },
-                    { q: "운전수와 지상 작업자 간 소통을 위한 담당자는?", type: "choice", options: ["신호수", "작업반장", "무전기", "CCTV"], a: 0 },
-                    { q: "강풍 시 타워크레인 작업 기준은?", type: "choice", options: ["기준 풍속 초과 시 중지", "감속 운전", "낮은 높이 작업", "숙련자 운전"], a: 0 },
-                    { q: "인상(높이 올림) 작업 시 준수 사항은?", type: "choice", options: ["매뉴얼 준수 및 지휘자 배치", "경험 많은 작업자 배치", "신속한 작업 수행", "야간 작업 실시"], a: 0 },
-                    { q: "지지 벽체(월타이) 해체 시기는?", type: "choice", options: ["계획에 따라 순차적", "설치 역순으로", "하부부터 상부로", "필요 없는 것부터"], a: 0 }
+                    { q: "슬링벨트 폐기 기준: 봉제실이 절단되어 모양이 유지되지 않으면 어떻게 해야 하는가?", type: "choice", options: ["즉시 폐기", "수리해서 사용", "그냥 사용", "테이프 감기"], a: 0 },
+                    { q: "벨트의 OO가 조금이라도 인지되면 즉시 폐기해야 한다.", type: "choice", options: ["박리", "오염", "변색", "주름"], a: 0 },
+                    { q: "운전수와 지상 작업자 간 소통을 위한 담당자는?", type: "choice", options: ["신호수", "경비", "반장", "일용직"], a: 0 },
+                    { q: "강풍 시 타워크레인 작업 기준은?", type: "choice", options: ["기준 풍속 초과 시 중지", "강행", "천천히", "낮게"], a: 0 },
+                    { q: "인상(높이 올림) 작업 시 준수 사항은?", type: "choice", options: ["매뉴얼 준수 및 지휘자 배치", "단독 작업", "신속 작업", "야간 작업"], a: 0 },
+                    { q: "지지 벽체(월타이) 해체 시기는?", type: "choice", options: ["계획에 따라 순차적", "임의로", "미리", "아무 때나"], a: 0 }
                 ]
             },
             { id: 16, title: "16. 항타/항발기", 
               prompt: "large pile driver machine hammering foundation piles construction site photorealistic", seed: 1616, color: "bg-zinc-600", imgSrc: null,
               questions: [
                 { q: "조립, 이동 시 전도 방지 확인 사항은?", type: "choice", options: ["지반 지지력 및 평탄도", "장비 색상", "운전자", "날씨"], a: 0 },
-                { q: "작업 중 리더 전도 방지 조치는?", type: "choice", options: ["아웃트리거 및 받침대 보강", "카운터웨이트 증량", "붐대 각도 조정", "작업 반경 축소"], a: 0 },
-                { q: "권상용 와이어로프 안전계수 기준은?", type: "choice", options: ["5 이상", "3 이상", "7 이상", "10 이상"], a: 0 },
-                { q: "작업 반경 내 근로자 접근은?", type: "choice", options: ["금지", "관계자 외 출입금지", "안전장구 착용 시 허용", "주의해서 통행"], a: 0 },
-                { q: "이동 시 갓길 붕괴 방지 조치는?", type: "choice", options: ["철판(복공판) 또는 깔목", "자갈 포설", "모래 다짐", "콘크리트 타설"], a: 0 }
+                { q: "작업 중 리더 전도 방지 조치는?", type: "choice", options: ["아웃트리거 및 받침대 보강", "문 개방", "경적", "청소"], a: 0 },
+                { q: "권상용 와이어로프 안전계수 기준은?", type: "choice", options: ["5 이상", "1 이상", "2 이상", "상관없음"], a: 0 },
+                { q: "작업 반경 내 근로자 접근은?", type: "choice", options: ["금지", "허용", "안전모 쓰면 허용", "상관없음"], a: 0 },
+                { q: "이동 시 갓길 붕괴 방지 조치는?", type: "choice", options: ["철판(복공판) 또는 깔목", "비닐", "천", "종이"], a: 0 }
             ]},
             { id: 17, title: "17. 건설용리프트", 
               prompt: "construction hoist elevator cage attached to building exterior photorealistic", seed: 1717, color: "bg-blue-700", imgSrc: null,
               questions: [
-                { q: "운행 중 출입문 상태는?", type: "choice", options: ["닫혀 있어야 함", "반만 닫음", "환기를 위해 개방", "고장 시 개방"], a: 0 },
-                { q: "탑승 시 적재 하중 기준은?", type: "choice", options: ["정격 하중 이내", "적재 정량", "최대 하중", "안전 하중"], a: 0 },
-                { q: "설치, 해체 시 필요한 조치는?", type: "choice", options: ["작업지휘자 배치", "안전관리자 배치", "신호수 배치", "경비원 배치"], a: 0 },
-                { q: "운반구 입구 낙하물 방지 시설은?", type: "choice", options: ["방호선반", "낙하물방지망", "안전난간", "접근금지울타리"], a: 0 },
-                { q: "충돌 방지 안전장치는?", type: "choice", options: ["권과방지장치", "과부하방지장치", "비상정지장치", "출입문 연동장치"], a: 0 }
+                { q: "운행 중 출입문 상태는?", type: "choice", options: ["닫혀 있어야 함", "열어둠", "반만 닫음", "상황 따라"], a: 0 },
+                { q: "탑승 시 적재 하중 기준은?", type: "choice", options: ["정격 하중 이내", "최대", "공간 만큼", "무제한"], a: 0 },
+                { q: "설치, 해체 시 필요한 조치는?", type: "choice", options: ["작업지휘자 배치", "작업자 자율", "신속 작업", "야간 작업"], a: 0 },
+                { q: "운반구 입구 낙하물 방지 시설은?", type: "choice", options: ["방호선반", "우산", "천막", "없음"], a: 0 },
+                { q: "충돌 방지 안전장치는?", type: "choice", options: ["권과방지장치", "속도계", "비상벨", "쿠션"], a: 0 }
             ]},
             { id: 18, title: "18. 용접장치", 
               prompt: "welding work sparks flying fire extinguisher nearby construction site photorealistic", seed: 1818, color: "bg-red-600", imgSrc: null,
               questions: [
-                { q: "불티 비산 화재 예방 조치는?", type: "choice", options: ["불티비산방지포 사용", "소화기 비치", "가연물 제거", "화재감시자 배치"], a: 0 },
-                { q: "작업 장소 주변 필수 비치물은?", type: "choice", options: ["소화기", "방화수", "모래", "불티방지포"], a: 0 },
-                { q: "가스 용접 역화 방지 장치는?", type: "choice", options: ["역화방지기", "압력조정기", "안전밸브", "차단밸브"], a: 0 },
-                { q: "밀폐 공간 용접 시 질식 예방 조치는?", type: "choice", options: ["환기", "송기마스크 착용", "산소농도 측정", "감시인 배치"], a: 0 },
-                { q: "교류아크용접기 감전 예방 장치는?", type: "choice", options: ["자동전격방지기", "누전차단기", "접지설비", "절연홀더"], a: 0 }
+                { q: "불티 비산 화재 예방 조치는?", type: "choice", options: ["불티비산방지포 사용", "신문지", "나무", "비닐"], a: 0 },
+                { q: "작업 장소 주변 필수 비치물은?", type: "choice", options: ["소화기", "물통", "선풍기", "쓰레기통"], a: 0 },
+                { q: "가스 용접 역화 방지 장치는?", type: "choice", options: ["역화방지기", "압력계", "밸브", "호스"], a: 0 },
+                { q: "밀폐 공간 용접 시 질식 예방 조치는?", type: "choice", options: ["환기", "향수", "문 닫기", "소등"], a: 0 },
+                { q: "교류아크용접기 감전 예방 장치는?", type: "choice", options: ["자동전격방지기", "차단기", "접지", "모두 다"], a: 0 }
             ]}
         ];
 
@@ -518,6 +518,8 @@
         let currentChapter = null;
         let currentMarkers = [];
         let solvedCount = 0;
+        let loadedImages = 0;
+        const totalImages = chapters.length;
 
         function init() {
             preloadAllImages();
@@ -543,7 +545,10 @@
                         setTimeout(() => statusDiv.classList.add('hidden'), 1000);
                     }
                 };
-                img.onerror = () => { loadedImages++; }
+                img.onerror = () => {
+                     // Fail silently or use fallback, but count it to hide status bar
+                    loadedImages++;
+                }
                 img.src = url;
             });
         }
@@ -596,19 +601,35 @@
             document.getElementById('fail-modal').classList.add('hidden');
             document.getElementById('scene-container').classList.remove('hidden');
             
-            // 이미지 즉시 할당 (로딩 이슈 해결)
+            // 이미지 즉시 로드 (타임아웃 적용)
             const bgEl = document.getElementById('scene-bg');
             const loadingEl = document.getElementById('scene-loading');
             const imgUrl = `https://pollinations.ai/p/${encodeURIComponent(currentChapter.prompt)}?width=800&height=600&seed=${currentChapter.seed}&nologo=true`;
             
-            // 강제 초기화 후 로드
+            // 리셋
             bgEl.style.backgroundImage = '';
+            bgEl.style.opacity = '0';
             loadingEl.classList.remove('hidden');
             
             const tempImg = new Image();
-            tempImg.onload = () => {
-                bgEl.style.backgroundImage = `url('${imgUrl}')`;
+            
+            // 3초 후 강제 로딩 해제 (멈춤 방지)
+            const timer = setTimeout(() => {
                 loadingEl.classList.add('hidden');
+                bgEl.style.opacity = '1';
+                bgEl.style.backgroundColor = '#334155'; // Fallback color
+            }, 3000);
+
+            tempImg.onload = () => {
+                clearTimeout(timer);
+                bgEl.style.backgroundImage = `url('${imgUrl}')`;
+                bgEl.style.opacity = '1';
+                loadingEl.classList.add('hidden');
+            };
+            tempImg.onerror = () => {
+                clearTimeout(timer);
+                loadingEl.classList.add('hidden');
+                bgEl.style.backgroundColor = '#334155'; 
             };
             tempImg.src = imgUrl;
 
@@ -627,6 +648,7 @@
         function generateMarkers() {
             const container = document.getElementById('marker-layer');
             container.innerHTML = '';
+            // 랜덤 위치 생성
             currentChapter.questions.forEach((q, index) => {
                 const marker = document.createElement('div');
                 marker.className = 'marker';
@@ -637,6 +659,7 @@
                 const left = 10 + Math.random() * 80;
                 marker.style.top = `${top}%`;
                 marker.style.left = `${left}%`;
+                marker.style.animationDelay = `${index * 0.1}s`;
                 
                 marker.onclick = () => showQuestion(index);
                 container.appendChild(marker);
@@ -672,19 +695,17 @@
                 input.onkeypress = (e) => { if(e.key === 'Enter') btn.click(); };
                 setTimeout(() => input.focus(), 100);
             } else {
-                // 셔플된 보기 출력
+                // 보기 셔플
                 const shuffledOptions = [...qData.options];
-                // 정답 인덱스 추적을 위해 매핑 필요하지만, 단순 텍스트 비교로 처리
-                const correctText = qData.options[qData.a];
-                
-                // 보기 섞기
+                const correctText = qData.options[qData.a]; // 정답 텍스트 저장
                 shuffledOptions.sort(() => Math.random() - 0.5);
-                
+
                 shuffledOptions.forEach((opt) => {
                     const btn = document.createElement('button');
-                    btn.className = "w-full text-left p-4 rounded-lg bg-slate-100 border border-slate-200 text-slate-700 hover:bg-blue-50 hover:text-blue-700 hover:border-blue-300 transition mb-2 font-medium";
+                    btn.className = "w-full text-left p-4 rounded-lg bg-slate-100 border border-slate-200 text-slate-700 hover:bg-blue-600 hover:text-white hover:border-blue-500 transition mb-2 font-medium";
                     btn.innerText = opt;
-                    btn.onclick = () => checkAnswer(index, opt, correctText);
+                    // 정답 텍스트와 비교하도록 수정
+                    btn.onclick = () => checkAnswer(index, opt, correctText); 
                     contentDiv.appendChild(btn);
                 });
             }
@@ -703,6 +724,7 @@
             if (qData.type === 'input') {
                 if (String(userAnswer).trim() === String(qData.answer)) isCorrect = true;
             } else {
+                // 객관식은 텍스트로 비교
                 if (userAnswer === correctAnswerText) isCorrect = true;
             }
 
@@ -787,27 +809,9 @@
             document.getElementById('hall-of-fame').classList.add('hidden');
         }
 
-        let loadedImages = 0;
-        const totalImages = chapters.length;
-        
-        function preloadAllImages() {
-             const statusDiv = document.getElementById('preload-status');
-             const countSpan = document.getElementById('preload-count');
-             
-             chapters.forEach(chap => {
-                 const img = new Image();
-                 const url = `https://pollinations.ai/p/${encodeURIComponent(chap.prompt)}?width=800&height=600&seed=${chap.seed}&nologo=true`;
-                 img.onload = () => {
-                     loadedImages++;
-                     countSpan.innerText = loadedImages;
-                     if(loadedImages === totalImages) setTimeout(() => statusDiv.classList.add('hidden'), 500);
-                 };
-                 img.src = url;
-             });
-        }
-
         init();
     </script>
 </body>
 </html>
+
 
