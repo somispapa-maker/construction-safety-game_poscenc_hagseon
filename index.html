@@ -225,6 +225,25 @@
 
     </main>
 
+    <!-- Footer (Sources) -->
+    <footer class="bg-slate-50 border-t border-slate-200 py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h3 class="text-slate-500 font-bold mb-4 text-sm"><i class="fas fa-book-open mr-2"></i>안전보건 자료 출처</h3>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-3 md:gap-6 text-xs text-slate-500">
+                <a href="https://m.molit.go.kr/viewer/skin/doc.html?fn=572161124fc051d936f56f6fe7fdb23f&rs=/viewer/result/20240619" target="_blank" class="flex items-center hover:text-blue-600 hover:bg-blue-50 px-3 py-2 rounded-lg transition duration-200 border border-transparent hover:border-blue-100">
+                    <i class="fas fa-external-link-alt mr-2 text-slate-400"></i>
+                    <span>2024 건설공사 안전관리 매뉴얼 (서울지방국토관리청)</span>
+                </a>
+                <span class="hidden md:inline text-slate-300">|</span>
+                <a href="https://www.moel.go.kr/skin/doc.html?fn=2023061317204578151361552b469699ae78756e140cec.pdf&rs=/viewer/BBS/2023/" target="_blank" class="flex items-center hover:text-blue-600 hover:bg-blue-50 px-3 py-2 rounded-lg transition duration-200 border border-transparent hover:border-blue-100">
+                    <i class="fas fa-external-link-alt mr-2 text-slate-400"></i>
+                    <span>사망사고 핵심 위험요인 자율점검표 (고용노동부)</span>
+                </a>
+            </div>
+            <p class="mt-6 text-[10px] text-slate-300">Copyright © Otiere Bangbae Safety Master. All rights reserved.</p>
+        </div>
+    </footer>
+
     <!-- Game Screen Overlay -->
     <div id="game-screen" class="fixed inset-0 bg-slate-900/90 z-50 hidden flex flex-col items-center justify-center p-4 backdrop-blur-sm">
         <div class="w-full max-w-5xl bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col h-[90vh] transform transition-all duration-300">
@@ -352,7 +371,7 @@
                 prompt: "construction scaffolding exterior building steel pipes safety photorealistic", seed: 303, color: "bg-orange-500", imgSrc: null,
                 questions: [
                     { q: "연약지반에 비계 기둥 설치 시 침하 방지를 위해 두께 OOmm 이상의 깔목을 사용해야 한다. (숫자만 입력)", type: "input", answer: "45" },
-                    { q: "비계 기둥 간격은 띠장 방향 O.OOm, 장선방향 O.Om 이하여야 한다. (숫자 2개 순서대로 입력, 콤마로 구분)", type: "input", answer: ["1.85", "1.5"] },
+                    { q: "비계 기둥 간격은 띠장 방향 O.OOm, 장선방향, O.Om 이하여야 한다. (숫자 2개 순서대로 입력, 콤마로 구분)", type: "input", answer: ["1.85", "1.5"] },
                     { q: "강관 비계의 벽이음 설치 간격은 수직, 수평방향 Om 이내마다 설치한다. (숫자만 입력)", type: "input", answer: "5" },
                     { q: "기둥 간격 10m 이내마다 40~60도로 교차하도록 OO를 설치해야 한다.", type: "choice", options: ["가새", "벽이음", "버팀대", "받침철물"], a: 0 },
                     { q: "작업발판의 폭은 OOcm 이상이어야 한다. (숫자만 입력)", type: "input", answer: "40" },
@@ -404,8 +423,11 @@
                 { q: "이동식 비계 최상부 작업 시 필수 설치물은?", type: "choice", options: ["안전난간", "의자", "파라솔", "깃발"], a: 0 },
                 { q: "작업자가 탄 채로 이동식 비계를 이동하는 것은?", type: "choice", options: ["절대 금지", "안전대 착용 시 가능", "평탄한 바닥 이동 시 가능", "관리자 감독 하에 가능"], a: 0 },
                 { q: "비계 승강 시 이용해야 하는 것은?", type: "choice", options: ["설치된 사다리", "비계 기둥", "교차 가새", "외부 비계"], a: 0 },
-                { q: "작업발판의 최대 적재하중은 OOOkg을 초과하지 않아야 한다. (숫자만 입력)", type: "input", answer: "250" },
-                { q: "이동식 비계 설치 높이는 밑변 최소폭의 O배 이내로 한다. (숫자만 입력)", type: "input", answer: "4" }
+                { q: "이동식 비계 설치 높이는 밑변 최소폭의 O배 이내로 한다. (숫자만 입력)", type: "input", answer: "4" },
+                { q: "2단 이상의 이동식 비계 설치 시에는 교차가새를 설치하며 최대 적재하중은 OOOkg 이하이다. (숫자만 입력)", type: "input", answer: "250" },
+                { q: "상부 안전난간 높이는 OOcm 이상으로 하며, 상부 안전난간과 바닥면 사이의 중앙에 중간 안전난간을 설치한다. (숫자만 입력)", type: "input", answer: "90" },
+                { q: "작업발판은 폭 OOcm 이상, 발판 사이 틈은 Ocm 이하여야 한다. (숫자 2개 순서대로 입력, 콤마로 구분)", type: "input", answer: ["40", "3"] },
+                { q: "재료 등은 달줄을 이용하여 작업대로 올리며 한번에 최대 적재하중의 1/OO을 넘기지 않는다. (숫자만 입력)", type: "input", answer: "10" }
             ]},
             { id: 8, title: "8. 달비계", 
               prompt: "construction worker painting high rise building exterior wall on hanging rope chair safety harness photorealistic", seed: 808, color: "bg-teal-500", imgSrc: null,
@@ -749,7 +771,7 @@
         function showQuestion(index) {
             const qData = currentChapter.questions[index];
             const marker = document.getElementById(`marker-${index}`);
-            if (marker.classList.contains('solved')) return;
+            const isSolved = marker.classList.contains('solved');
 
             document.getElementById('scene-container').classList.add('hidden');
             const qCard = document.getElementById('question-card');
@@ -760,12 +782,21 @@
             
             const contentDiv = document.getElementById('q-content');
             contentDiv.innerHTML = '';
-            document.getElementById('q-feedback').classList.add('hidden');
+            const feedback = document.getElementById('q-feedback');
+
+            // 이미 푼 문제인 경우 피드백 즉시 표시
+            if (isSolved) {
+                feedback.innerHTML = '<i class="fas fa-check-circle mr-2"></i>정답입니다! (완료됨)';
+                feedback.className = "mt-6 p-4 rounded-xl text-lg font-bold bg-green-100 text-green-700 border border-green-200 flex items-center justify-center";
+                feedback.classList.remove('hidden');
+            } else {
+                feedback.classList.add('hidden');
+            }
 
             if (Array.isArray(qData.answer)) {
                 // Multi-input UI
                 let inputsHTML = '';
-                qData.answer.forEach((_, i) => {
+                qData.answer.forEach((ans, i) => {
                     inputsHTML += `<input type="text" id="ans-${i}" class="w-full bg-slate-100 border-2 border-slate-300 text-slate-800 p-3 rounded-lg text-center font-bold focus:outline-none focus:border-blue-500 mb-2" placeholder="값 ${i+1} (숫자)">`;
                 });
                 contentDiv.innerHTML = `
@@ -774,8 +805,20 @@
                         <button id="submit-btn" class="bg-blue-600 hover:bg-blue-500 text-white px-6 rounded-lg font-bold py-3 transition w-full">확인</button>
                     </div>
                 `;
-                const btn = contentDiv.querySelector('#submit-btn');
-                btn.onclick = () => checkAnswer(index, null); // Pass null for multi-input, handled inside
+
+                // 이미 푼 경우 값 채우고 비활성화
+                if (isSolved) {
+                    qData.answer.forEach((ans, i) => {
+                        const input = document.getElementById(`ans-${i}`);
+                        input.value = ans;
+                        input.disabled = true;
+                    });
+                    document.getElementById('submit-btn').style.display = 'none';
+                } else {
+                    const btn = contentDiv.querySelector('#submit-btn');
+                    btn.onclick = () => checkAnswer(index, null);
+                }
+
             } else if (qData.type === 'input') {
                 contentDiv.innerHTML = `
                     <div class="flex gap-2">
@@ -783,22 +826,42 @@
                         <button id="submit-btn" class="bg-blue-600 hover:bg-blue-500 text-white px-6 rounded-lg font-bold transition">확인</button>
                     </div>
                 `;
-                const btn = contentDiv.querySelector('#submit-btn');
                 const input = contentDiv.querySelector('#answer-input');
-                btn.onclick = () => checkAnswer(index, input.value);
-                input.onkeypress = (e) => { if(e.key === 'Enter') btn.click(); };
-                setTimeout(() => input.focus(), 100);
+                const btn = contentDiv.querySelector('#submit-btn');
+
+                // 이미 푼 경우 값 채우고 비활성화
+                if (isSolved) {
+                    input.value = qData.answer;
+                    input.disabled = true;
+                    btn.style.display = 'none';
+                } else {
+                    btn.onclick = () => checkAnswer(index, input.value);
+                    input.onkeypress = (e) => { if(e.key === 'Enter') btn.click(); };
+                    setTimeout(() => input.focus(), 100);
+                }
+
             } else {
                 const shuffledOptions = [...qData.options];
                 const correctText = qData.options[qData.a];
-                // Seeded shuffle if desired, or simple random
+                
+                // Seeded shuffle if desired, or simple random (only shuffle if not solved to keep order or re-shuffle same way)
+                // For simplicity, we just randomize. If solved, we highlight the correct one.
                 shuffledOptions.sort(() => Math.random() - 0.5);
 
                 shuffledOptions.forEach((opt) => {
                     const btn = document.createElement('button');
                     btn.className = "w-full text-left p-4 rounded-lg bg-slate-100 border border-slate-200 text-slate-700 hover:bg-blue-600 hover:text-white hover:border-blue-500 transition mb-2 font-medium";
                     btn.innerText = opt;
-                    btn.onclick = () => checkAnswer(index, opt, correctText);
+                    
+                    if (isSolved) {
+                        btn.disabled = true;
+                        if (opt === correctText) {
+                            btn.classList.remove('bg-slate-100', 'text-slate-700');
+                            btn.classList.add('bg-green-600', 'text-white', 'border-green-500');
+                        }
+                    } else {
+                        btn.onclick = () => checkAnswer(index, opt, correctText);
+                    }
                     contentDiv.appendChild(btn);
                 });
             }
@@ -913,3 +976,4 @@
     </script>
 </body>
 </html>
+
